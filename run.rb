@@ -8,14 +8,14 @@ get '/' do
 end
 
 get '/years' do
-
-
-
-  # code!
+	@years = [*1995..2016]
+	@description = "These years represent the range of years that I have been alive."
   erb :years, layout: :main
 end
 
 get '/states' do
-  # code!
+	@states = ["Illinois", "Colorado", "Ohio", "Indiana", "California", "Florida", "Arizona", "Wisconsin", "Texas", "Tennessee", "South Carolina", "North Carolina", "Pennsylvania", "Oklahoma", "New Mexico", "Nevada", "Missouri", "Michigan", "Massachusetts", "Kentucky", "Iowa", "Georgia", "Arkansas"]
+	@states.sort
+	@states.sort!
   erb :states, layout: :main
 end
