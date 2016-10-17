@@ -1,9 +1,22 @@
 <h1>State List</h1>
 
 <!-- iterate through each state in the array and put them into list items individually using the index of the array item as the list items ID -->
+
+<!-- jarp:
+ this is a somewhat convoluted way to do the looping.
+ Possible you where thrown by the putting the index into the html
+-->
+
 <p>I have visited the following states:</p>
 <ul>
   <% @states.each_index do | index | %>
     <li><%= @states.fetch(index) %></li>
+  <% end %>
+</ul>
+
+<!-- this is what I was looking for -->
+<ul>
+  <% @states.each do | state | %>
+    <li id="<%= @states.index(state) %>"><%= state %></li>
   <% end %>
 </ul>

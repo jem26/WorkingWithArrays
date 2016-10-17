@@ -8,7 +8,7 @@ get '/' do
 end
 
 get '/years' do
-	@years = [*1995..2016]
+	@years = [*1995..2016] # that's event a different way to do it!
 	@description = "These years represent the range of years that I have been alive."
   erb :years, layout: :main
 end
